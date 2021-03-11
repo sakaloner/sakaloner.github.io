@@ -19,7 +19,7 @@ const app = Vue.createApp({
                {'link':'www.laPampa.com', 'titulo':'Ep4 How to get rich', 'autor':'Joe rogan'}
             ],
             entradas_music: [
-               {'link':'www.MusicGonorreica.com', 'titulo':'Nirvana Reloaded', 'autor':'Tu mama la perra'}
+               {'link':'www.MusicGonorreica.com', 'titulo':'Nirvana Reloaded', 'autor':'Smell like teens spirtis'}
             ]
          }
     },
