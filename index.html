@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<!-- Open page file:///home/andres/coding/webdev/listaApp/index.html 
+Todo
+1. Hacer una pestaña que se llame waiting list
+3. Hacer otra pestaña que se llame Archivados
+2. Hacer un boton de edicion
+3. Hacer un boton de archivar
+4. Hacer un boton de editar
+5. 
+-->
+<head>
+    <title>Libroke</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+    <body>
+        <div id="app" class="demo">
+            <h1>Libroker</h1>
+            <div>
+                <ul id="nav-bar">
+                    <li @click="page = 0" class="nav-bar-li"><button>Articles</button></li>
+                    <li @click="page = 1" class="nav-bar-li"><button>Books</button></li>
+                    <li @click="page = 2" class="nav-bar-li"><button>Podcasts</button></li>
+                    <li @click="page = 3" class="nav-bar-li"><button>Music</button></li>
+                </ul> 
+            </div>
+            <br>
+            <br>
+            <!-- Super Cuadrado -->
+            <div id="super-cuadrado" >
+                <input v-model="link" id="link-sc" placeholder="Link"><br>
+                <input v-model="titulo" id="titulo-sc" placeholder="Titulo"><br>
+                <input v-model="autor" id="autor-sc" placeholder="Autor"><br>
+                <!-- slider -->
+                <div class="slidecontainer">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <p>Value: <span id="demo"></span></p>
+                </div>
+                <button @click="save_form">Save</button>
+            </div>
+               
+            <!-- Lista de cosas -->
+            <div>
+                <ol class="lista-el">
+                   <!-- general -->
+                    <div class="div-lista-el"> 
+                        <li v-for="entrada in sortedArray" class="el-list">
+                            <p><a :href="entrada.link">{{ entrada.titulo }}</a> </p>
+                            <p>Autor: {{ entrada.autor }}</p>
+                            <p>Rate: {{ entrada.rate }}</p>
+                        </li>
+                    </div>
+                </ol>
+            </div>
+        </div>
+
+
+
+        <!-- Import App -->
+        <script type="text/javascript" src="main.js"></script>
+        <!-- Mount App -->
+    </body>
+</html>
