@@ -1,18 +1,139 @@
+*{ 
+    margin: 0;
+    text-decoration: none; 
+    font-family:  'Roboto', sans-serif;
+    box-sizing: border-box; 
+    padding: 0; 
+}
+
+body{ 
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    width: 60%; 
+    padding: 20px; 
+}
+
 .demo {
-    font-family: sans-serif;
-    border: 1px solid #eee;
     border-radius: 2px;
     padding: 20px 30px;
     margin-top: 1em;
     margin-bottom: 40px;
     user-select: none;
     overflow-x: auto;
-  }
+    margin: auto;
+    background-color: rgba(193, 189, 197, 0.205);
+}
+
+.demo h1{
+    color:#e3e6eee5; 
+    font-size: 30px; 
+    margin-bottom: 15px; 
+    margin: 0px 200px;
+    padding: 2px;
+}
+
+#app {
+  width: 70%;
+  padding: 20px; 
+  border-radius: 20px;
+  box-shadow: 7px 13px 37px #000;
+}
+
+/* Botones */
 #nav-bar {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+
+#nav-bar button{
+  cursor: pointer;
+  width: 124px; 
+  background: rgba(25, 24, 26, 0.151);  
+  margin:8px 0px; 
+  border: 2px solid transparent; 
+  border-radius: 15px; 
+  padding: 8px; 
+  color: rgba(218, 224, 221, 0.952); 
+  font-size: 14px; 
+  border: 2px solid rgba(222, 212, 231, 0.318);
+}
+
+#nav-bar #articles:hover{
+  color:white; 
+  background: rgba(226, 59, 8, 0.801); 
+  transition: 700ms; 
+  border: 2px solid rgba(255, 255, 255, 0.726);
+}
+
+#nav-bar #books:hover{
+  color:white; 
+  background: rgba(8, 33, 116, 0.801); 
+  transition: 700ms; 
+  border: 2px solid rgba(255, 255, 255, 0.726);
+}
+
+#nav-bar #podcasts:hover{
+  color:white; 
+  background: rgba(211, 174, 11, 0.801); 
+  transition: 700ms; 
+  border: 2px solid rgba(255, 255, 255, 0.726);
+}
+
+#nav-bar #music:hover{
+  color:white; 
+  background: rgba(109, 7, 122, 0.801); 
+  transition: 700ms; 
+  border: 2px solid rgba(255, 255, 255, 0.726);
+}
+
+/*inputs */
+
+#super-cuadrado{
+  width: 100%; 
+  outline: none; 
+  color: rgba(237, 230, 245, 0.986); 
+  background: rgba(98, 94, 102, 0.318); 
+  padding: 8px; font-size: 16px; 
+  font-family:  'Roboto', sans-serif; 
+  margin-bottom: 14px; margin-top: 12px; 
+  border-radius: 10px; 
+  border: 2px solid rgba(222, 212, 231, 0.185);
+}
+
+#super-cuadrado input{
+  width: 100%; 
+  background: rgba(214, 204, 228, 0.342);  
+  margin:8px 0px; 
+  border: 2px solid transparent; 
+  border-radius: 15px; 
+  padding: 8px; 
+  color: rgba(218, 224, 221, 0.952); 
+  font-size: 14px; 
+  border: 2px solid rgba(222, 212, 231, 0.318);
+  outline: none;
+}
+
+#super-cuadrado button{
+  cursor: pointer;
+  width: 124px; 
+  background: rgba(25, 24, 26, 0.151);  
+  margin:8px 0px; 
+  border: 2px solid transparent; 
+  border-radius: 15px; 
+  padding: 8px; 
+  color: rgba(218, 224, 221, 0.952); 
+  font-size: 14px; 
+  border: 2px solid rgba(222, 212, 231, 0.318);
+}
+
+#super-cuadrado button:hover{
+  color:white; 
+  background: rgba(7, 122, 41, 0.801); 
+  transition: 700ms; 
+  border: 2px solid rgba(255, 255, 255, 0.726);
+}
+
+
 .nav-bar-li {
   float: left;
 }
@@ -21,6 +142,13 @@
 }
 .slidecontainer {
   width: 36%; /* Width of the outside container */
+}
+
+.slidecontainer p{
+  color:#e3e6eee5; 
+  font-size: 20px; 
+  margin-bottom: 15px; 
+  padding: 2px;
 }
 
 /* The slider itself */
@@ -47,19 +175,39 @@
   appearance: none;
   width: 20px; /* Set a specific slider handle width */
   height: 20px; /* Slider handle height */
-  background: #4CAF50; /* Green background */
+  background: rgba(218, 224, 221, 0.952);; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #4CAF50; /* Green background */
+  background: rgba(218, 224, 221, 0.952);; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
-#app {
-   margin: auto;
-   width: 50%;
-   border: 3px solid green;
-   padding: 10px;
+
+.div-lista-el{
+  width: 100%; 
+  outline: none; 
+  color: rgba(237, 230, 245, 0.986); 
+  background: rgba(98, 94, 102, 0.318); 
+  padding: 8px; font-size: 16px; 
+  font-family:  'Roboto', sans-serif; 
+  margin-bottom: 14px; 
+  margin-top: 12px; 
+  border-radius: 10px; 
+  border: 2px solid rgba(222, 212, 231, 0.185);
+}
+
+.el-list p{
+  margin: 0px 3px;
+  color:#e3e6eee5; 
+  font-family:  'Roboto', sans-serif; 
+  font-size: 15px; 
+  padding: 2px;
+}
+
+.el-list a{
+  color:#79b7fdfb;
+  text-decoration: underline;
 }
