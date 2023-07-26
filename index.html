@@ -1,67 +1,64 @@
 <!DOCTYPE html>
 <html>
-<!-- Open page file:///home/andres/coding/webdev/listaApp/index.html 
-Todo
-1. Hacer una pestaña que se llame waiting list
-3. Hacer otra pestaña que se llame Archivados
-2. Hacer un boton de edicion
-3. Hacer un boton de archivar
-4. Hacer un boton de editar
-5. 
--->
 <head>
-    <title>LibHub</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/vue@next"></script>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-    <body>
-        <div id="app" class="demo">
-            <h1>LibHub</h1>
-            <div>
-                <ul id="nav-bar">
-                    <li @click="page = 0" class="nav-bar-li"><button id="articles">Articles</button></li>
-                    <li @click="page = 1" class="nav-bar-li"><button id="books">Books</button></li>
-                    <li @click="page = 2" class="nav-bar-li"><button id="podcasts">Podcasts</button></li>
-                    <li @click="page = 3" class="nav-bar-li"><button id="music">Music</button></li>
-                </ul> 
-            </div>
-            <br>
-            <br>
-            <!-- Super Cuadrado -->
-            <div id="super-cuadrado" >
-                <input v-model="link" id="link-sc" placeholder="Link"><br>
-                <input v-model="titulo" id="titulo-sc" placeholder="Titulo"><br>
-                <input v-model="autor" id="autor-sc" placeholder="Autor"><br>
-                <!-- slider -->
-                <div class="slidecontainer">
-                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                  <p>Value: <span id="demo"></span></p>
-                </div>
-                <button @click="save_form">Save</button>
-            </div>
-               
-            <!-- Lista de cosas -->
-            <div>
-                <ol class="lista-el">
-                   <!-- general -->
-                    <div class="div-lista-el"> 
-                        <ui v-for="entrada in sortedArray" class="el-list">
-                            <p><a :href="entrada.link">{{ entrada.titulo }}</a> </p>
-                            <p>Autor: {{ entrada.autor }}</p>
-                            <p>Rate: {{ entrada.rate }}</p>
-                            <br>
-                        </ui>
-                    </div>
-                </ol>
-            </div>
+<body>
+    <div class="container mx-auto px-4">
+        <div class="py-10">
+            <h1 class="text-4xl mb-2 font-bold">Andres Velasquez Portafolio</h1>
+            <p class="text-base">I am a guy who does things with code.</p>
         </div>
 
+        <div class="py-10">
+            <div class="my-5">
+                <h2 class="text-2xl mb-1 font-semibold">Gepeto: an AI powered general assistant</h2>
+                <blockquote class="italic pl-4 border-l-4 border-gray-500 text-lg text-gray-600 my-2">"the future is not guaranteed, only the passing of time"</blockquote>
+                <div><img src="media/listapp.gif" alt="Gif for Article 1"></div>
+                <div class="article" id="article1">
+                    <h2 class="text-1xl mb-1 font-semibold" id="technical">Technical</h1>
+                    <p>I am using the openai library for python to create a chatbot class where the functionality of the chatgpt reponsse is set up. This files lives in the brain folder with the functions since i am using the gpt models with function calling implemented. The tlbot.py is where the telegram bot lives, and for this i am using the python telegram bot library. The database library is where the two modes of data storage lives, a sqlite database and an embedding database provided by the chromadb library live. The sql is for storing data intentionally, the chroma databse is for storing past bot and user messages, and also for retrieving them. The bot can scheduled messages to send at an specific date or at a certain interval, this is provided by the apscheduler library.</p>
+                    <h2 class="text-1xl mb-1 font-semibold" id="story">Story</h2>
+                    <p>In the year 2023, amidst the expansive realm of artificial intelligence (AI) development, significant advancements in large language models (LLMs) and image synthesis are revolutionizing the course of human history. This unprecedented surge in progress hints at a profound paradigm shift, with AI possibly transcending beyond a mere milestone to become an unparalleled phenomenon. Although I could extensively present a multitude of arguments substantiating this claim, I shall give the world time to speak for itself. Let it be known, however, that in recent years, humanity has made unparalleled breakthroughs in the realms of intelligence, potentially paving the way for the creation of a self-improving, superior machine. Such an achievement, undoubtedly, would forever alter the landscape of our world (read this if you are interested in how it might change the world )
+                    <a href="https://roonscape.ai/p/agi-futures?utm_source=profile&amp;utm_medium=reader2">https://roonscape.ai/p/agi-futures?utm_source=profile&amp;utm_medium=reader2</a></p>
+                    <p>Even if we are conservative to a fault and assume that all AI progress somehow has reached a plateau in its current state, the immense value residing within LLMs still remains undeniable. A symbiotic relationship between humans and these extraordinary models is all but inevitable, accentuating the unique attributes possessed by each party. LLMs offer unparalleled computational prowess, vast storage capacity, and the absence of bodily constraints, while humans bring to the table their embodiment and consciousness. This merging of minds, akin to a digital second brain, will be dawn of a new species that the face of earth has never seen before.</p>
+                    <p>Driven by my desire to contribute to this transformation and capitalize on existing advancements, I have interconnected a Telegram bot with the GPT api with some databases. These implementations serve as my own means of harnessing the power of ChatGPT for diverse practical applications. It allows me to explore ease of use, problem-solving capabilities, and the limitations of these models. Utilizing a pre-existing framework like Langchain seemed overly precise and abstract, for all abstractions are inherently unappealing and futile, unless they originate from one&#39;s own mind. My intent was to learn the intricacies of ChatGPT through varied approaches and experimentation, unhindered by excessive abstractions.</p>
+                    <p>This ongoing journey continually evolves. I shall diligently update this repository with notable and practical discoveries, encompassing new models and any other developments that arise. Your valuable contributions are also welcome! By coding and integrating commendable functionalities, you may contribute to this endeavor and make your own pull requests.</p>
+                </div>
+                <button class="mt-3 px-6 py-2 font-semibold text-white bg-blue-500 rounded">See More</button>
+            </div>
 
-
-        <!-- Import App -->
-        <script type="text/javascript" src="main.js"></script>
-        <!-- Mount App -->
-    </body>
+            <div class="my-5">
+                <h2 class="text-2xl mb-1 font-semibold">Listapp: attention is all we have</h2>
+                <blockquote class="italic pl-4 border-l-4 border-gray-500 text-lg text-gray-600 my-2">"seize the means of algorithmic recommendations" - Karl Marx</blockquote>
+                <div><img src="media/listapp.gif" alt="Gif for Article 1"></div>
+                <div class="article" id="article2">
+                    <p>This is projects is for a webpage where users can save content references and also explore the content of their friends. It is like a digital library for all types of media (podcasts, videos, music, articles, books, tweets).</p>
+                    <ul>
+                    <li>The back end comprises a FastAPI framework based Python server and a Docker-based PostgreSQL database for straightforward deployment.</li>
+                    <li>The front end was initially vanilla JavaScript, HTML, and CSS. Over time, it evolved into a working prototype using Vue.js, and now the final product is crafted with React.js.</li>
+                    <li>The Chrome extension is developed with vanilla JavaScript.</li>
+                    </ul>
+                    <h2 class="text-2xl mb-1 font-semibold" id="story-">story:</h2>
+                    <p>&quot;seize the means of production information flow&quot; - karl marx communist manifest.</p>
+                    <p>I have been interested for sometime now in soemthing i would call &quot;systematization of information flows&quot;. Somewhere where this interest presented itself was my extensive habit of reading online material. I have a lot of places from where good writing might come from: friend recommendations, blogs, twitter, among others. However, the mood for reading and the process of finding good material to read dont happen contiguosly. I lamented the lack of a comprehensible solution for saving areticles for later consumtion. Although platforms like Pocket, myMind or Instapaper offer a semblance of this service, I envisioned a more extensive tool, allowing users not only to save information for future use, but classify it, rate it, and train a personal algorithm with it. I imagined a personal digital library for all digital content.</p>
+                    <p>Our mind is made to a great extent by the things we feed it with. Now that theres so much information in the world i find it very important to create systems so we feed ourselves with things that makes us better human beings. I find this is one of the most important problems of our time.</p>
+                    <p>Unfortunately, we humans are somewhat flawed in making the best choices for ourselves. Our attention can easily be exploited, and technology companies are investing significant energy in doing just that. These companies focus predominantly on maximising the time users spend on their platforms rather than the impact of the consumed content on these users. An excellent example is Tinder, which benefits more from users perpetually engaging in casual relationships than from users finding their lasting loving relationships.</p>
+                    <p>With my growing recognition of the importance of algorithms for the future of mankind, I thought, why not develop a platform not only for saving and retrieving content but also for discovering new content?</p>
+                    <p>This idea transformed ListApp not only into a comprehensive aggregator of links with tags—capturing videos, articles, books, tweets, music, and podcasts but a proper social media application. Other people act like compression nodes of interests, so it adds to the recommendation algorithm content not added by the user themeselves but that might really interest them.</p>
+                    <p>When i got into a place of development where i had all the main feautures i was ready to launch. But wait i worked so long in this stuff and how do i show it to people? that was actually the hard part. I fell into the common trap of &quot;spending a lot of time working on something that nobody wants&quot;. I could have maybe created a much simpler prototype and distribute a little to some people to get some feedback about if they would care for this product, thats the reasonable thing to do. I didnt really want to be reasonable, i had an unreasonable urge to finisht he project and confidence in that i was doing something good by doing it, even if wasnt used by anyone i would have stilled learned something.</p>
+                    <p>Moreover, I found myself questioning my approach. For example i was not sure if the platform i had built, an agreggator, was robust enough since it depends on other platforms to function. Also i got interested in other approaches to the problem, for example the Atproto protocol where the content is hosted by a federation of computers, allowing to save content directly in the protocol, mantaining descentralization, and being agnostic with the forntend implementation of the protocol. Maybe the right platform to get algorithm soverignety would one where video, audio, and text content could be saved and shared, something like a a mega internet structure.</p>
+                    <p>I also have other concernes about the UI. I didnt feel satisfied enoguht with the existing interface, not only because i didnt pay a lot attention to aesthetics, but because of its functionality. In the project I used a basic Chrome extension for quick content saving. A more innovative and maybe better approach could be a Large Language Model bot serving as a user interface, where users could save content and receive recommendations via simple text. Despite these considerations, I was uncertain about the best approach to accomplish this task.</p>
+                    <p>So yeah, in conclusion i couldnt really distribute it well, i was unsure of my approach to solve the problem of algorithmic autonomy, and honestly i got very discouraged that nobody wanted to use the thing i had worked so hard on!</p>
+                    <p>Anyways i learned a lot from this project. I not only tought direct things myself how to create a website, both its abckedn and front ends, how to host it in a cloud computing service, but i also learned about how to work hard and maximize time, how to understand new libraries, how to ask for help and how to research.
+                    I find it funny that i didnt know about gpt at this time. I probably could have finished the project way earlier but i might have not get so much resilience from breaking my head alone with the problems i found.</p>
+                    <p>If you are interested in this project and want to help reach out trough my email andresf40y0@gmail.</p>
+                </div>
+                <button class="mt-3 px-6 py-2 font-semibold text-white bg-blue-500 rounded">See More</button>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
