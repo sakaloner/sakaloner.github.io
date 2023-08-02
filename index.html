@@ -11,9 +11,12 @@
 </head>
 <body>
     <div class="container mx-auto px-10 flex-col justify-center items-center">
-        <div class="flex justify-center center items-center py-10">
+        <div class="flex justify-center center  items-center py-10">
             <h1 class="text-4xl mb-2 font-bold">Andrés Velásquez's Portafolio</h1>
-            <p>Welcome to my  portafolio. Here you will find a couple projects I have worked on.</p>
+            <div class="display w-50 flex-col">
+                <p>Hi! welcome to my  portafolio.</p>
+                <p>I am a data scientist and software developer and here you will find a couple projects I have worked on.</p>
+            </div>
         </div>
         <div class="flex gap-5">
             <a href="https://www.linkedin.com/in/andres-velasquez-agudelo/"><img src="media/LinkedIN_black.svg" alt="linkedin_logo" width="30" height="30"></a>
@@ -28,9 +31,10 @@
                 <!-- <blockquote class="italic pl-4 border-l-4 border-gray-500 text-lg text-gray-600 my-2">"the future is not guaranteed, only the passing of time"</blockquote> -->
                 <div class="article flex-col" id="article3" >
                     <img src="media/chadmed.png" alt="an screenshot of a chatbot">
+                    <br/>
                     <p>As a freelance project I created 'ChatMed', a dual-function JavaScript extension using Vue.js framework, aimed at simplifying healthcare professionals' repetitive tasks. Comprised of a form automation system built with vanilla JavaScript, this tool streamlined the design and modification process of patient forms, mitigating data-entry errors and boosting administrative efficiency. The extension also included an AI-assisted medical chatbot developed to provide healthcare providers with potential diagnoses and treatment suggestions. This project facilitated profound growth in my technical skills and understanding of AI in healthcare, while bolstering my ability to fulfill client requests and adapt solutions to user-specific needs. The project enhanced my organization, problem-solving, and self-learning capabilities, equipping me for dynamic tech environments and reinforcing my drive to develop impactful technological solutions.</p>
                     <br/>
-                    <p>Checkout the code <a href='github.com' class="text-blue-800">here.</p></a>
+                    <p>Checkout the code <a href='https://github.com/sakaloner/chatmed' class="text-blue-800">here.</p></a>
                     <br/>
                     <div style="display:none" id="div1">
                         <ol>
@@ -44,7 +48,7 @@
                         <p>The project afforded an invaluable opportunity to hone my technical skills, explore the potential of AI in healthcare, and make an impactful change through technology. Moreover, I gained extensive experience in handling client requests and fine-tuning solutions to meet specific user requirements. Working independently on the project sharpened my organization, problem-solving, and self-learning abilities, equipping me to thrive in dynamic tech environments. The satisfaction derived from seeing my solutions enhance the efficiency and accuracy of health care providers has fueled my aspiration for creating meaningful technological solutions.</p>
                         <br/>
                     </div>
-                    <button id="button2" class='bg-black text-white hover:bg-gray-800 font-bold py-2 px-4 rounded' onClick="toggleSeeMore('1')">See more</button>
+                    <button id="button1" class='bg-black text-white hover:bg-gray-800 font-bold py-2 px-4 rounded' onClick="toggleSeeMore('1')">See more</button>
                 </div>
             </div>
 
@@ -59,7 +63,7 @@
                     <br/>
                     <p>In this passion project, I leveraged the capabilities of Python, the OpenAI api, SQL, an embedding database, and the Telegram bot api to develop a comprehensive solution. The project revolves around a chatbot class, created using the Python OpenAI library, specifically employing the functionalities of GPT models with function calling. The brain folder contains the crux of the model, housing the chatbot logic and functionalities. This chatbot interfaces with a Telegram bot, implemented via the Python Telegram Bot library, and lives in tlbot.py. This design employs two storage modes, both contained in the database library. These modes involve a SQLite database, tailored for intentional data storing, and a Chroma database, supplied by the ChromaDB library, established for the storage and retrieval of past bot and user messages. Notably, the bot can also schedule messages to be dispatched at specific dates and intervals courtesy of the APScheduler library, adding an extra layer of automation to the solution. This project showcases my proficiency in dealing with varied databases, designing chatbots, and integrating them with a live messaging platform.</p>
                     <br/>
-                    <p>Checkout the code <a href='github.com' class="text-blue-800">here.</p></a>
+                    <p>Checkout the code <a href='https://github.com/sakaloner/gepeto' class="text-blue-800">here.</p></a>
                     <br/>
                     <div style="display:none" id="div2">
                         <h2 class="text-2xl mb-1 font-semibold" id="story">Story</h2>
@@ -73,7 +77,7 @@
                         <p>This ongoing journey continually evolves. I shall diligently update this repository with notable and practical discoveries, encompassing new models and any other developments that arise. Your valuable contributions are also welcome! By coding and integrating commendable functionalities, you may contribute to this endeavor and make your own pull requests.</p>
                         <br/>
                     </div>
-                    <button class='bg-black text-white hover:bg-gray-800 font-bold py-2 px-4 rounded'' onClick="toggleSeeMore('2')">See more</button>
+                    <button id='button2' class='bg-black text-white hover:bg-gray-800 font-bold py-2 px-4 rounded'' onClick="toggleSeeMore('2')">See more</button>
                 </div>
             </div>
 
@@ -88,9 +92,9 @@
                     <p>I embarked on this passion project with a vision to address the pressing issue of algorithmic autonomy, through creating a novel social network. This network manifests as a webpage where users can not only save references to various media content including podcasts, videos, music, articles, books and tweets, but also explore the content saved by their friends, essentially curating a digital library of media.
 The foundational layer of this project utilizes a robust Python server based on the FastAPI framework coupled with a Docker-based PostgreSQL database, guaranteeing easy deployment. Initiated with a front end composed of vanilla JavaScript, HTML, and CSS, the project subsequently transitioned to a Vue.js prototype before the final react.js-based product was realized. Additionally, the project features a Chrome extension, developed with vanilla JavaScript, seamless integration and user experience. This project truly reflects my commitment to leveraging technology for meaningful connection and user empowerment.</p>
                     <br/>
-                    <p>Checkout the code <a href='github.com' class="text-blue-800">here.</p></a>
+                    <p>Checkout the code <a href='https://github.com/sakaloner/listapp' class="text-blue-800">here.</p></a>
                     <br/>
-                    <div style="display:none" id="2">
+                    <div style="display:none" id="div3">
                         <h2 class="text-2xl mb-1 font-semibold" id="story-">Story:</h2>
                         <p>I have been interested for sometime now in soemthing i would call &quot;systematization of information flows&quot;. Somewhere where this interest presented itself was my extensive habit of reading online material. I have a lot of places from where good writing might come from: friend recommendations, blogs, twitter, among others. However, the mood for reading and the process of finding good material to read dont happen contiguosly. I lamented the lack of a comprehensible solution for saving areticles for later consumtion. Although platforms like Pocket, myMind or Instapaper offer a semblance of this service, I envisioned a more extensive tool, allowing users not only to save information for future use, but classify it, rate it, and train a personal algorithm with it. I imagined a personal digital library for all digital content.</p>
                         <br/>
